@@ -48,6 +48,12 @@ LED status:
 
 Drivers are needed under Windows for the USB-Serial. They can be found here : <https://github.com/rogerclarkmelbourne/Arduino_STM32>
 
+## How to Use
+
+Plug the MemoAladin first* to your computer with a micro-usb cable, then plug the 2 wires to your Aladin computer. Then use as a MemoMouse: initiate the transfert on DataTrack, then send the logs with the Aladin. You can also do backward and send the logs from the Aladin first, then transfert from DataTrack. The transfert will be immediate and will not wait for the Aladin (but do not wait too long or your dive logs will have wrong date&time! DataTrack syncs on the Aladin).
+
+* If you plug the wires to the Aladin without the interface powered, the 2 wires will act as shorted and trigger button actions in your Aladin...
+
 ## 3D Printed Casing
 
 The STL files of my 3D printed case are provided if you want to reuse it as-is, or if you want to modify it there is a Fusion 360 archive file you can import.
