@@ -48,6 +48,12 @@ LED status:
 
 Drivers are needed under Windows for the USB-Serial. They can be found here : <https://github.com/rogerclarkmelbourne/Arduino_STM32>
 
+## 3D Printed Casing
+
+The STL files of my 3D printed case are provided if you want to reuse it as-is, or if you want to modify it there is a Fusion 360 archive file you can import.
+
+Screws are 6mm head / 3mm thread diameter self-tapping screws.
+
 
 ## Resources
 Big thanks to Wayne Heming who did all the hard work of figuring out the protocols:
