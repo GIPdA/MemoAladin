@@ -12,6 +12,8 @@ In theory it should be compatible with all Aladin computers, but testing were on
 
 Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": <http://wiki.stm32duino.com/index.php?title=Blue_Pill>
 
+	You need to fix the USB pullup by replacing R10 with a 1.5k resistor or opt for the dirty fix like me and add a 1.8k resistor between PA12 and 3V3.
+
 USB-Serial for PC comm, and original dive computer wires/connectors. Small LED for status.
 
 Pinout:
@@ -33,11 +35,14 @@ Adjust input resistor and add a weak pullup/pulldown to reject Serial port noise
 
 ## Software
 
-Upload code with Arduino for a STM32F103C8 board, 72MHz. No hardware-specific functions are used.
+	You need to add STM32 support to Arduino: https://github.com/rogerclarkmelbourne/Arduino_STM32
+
+Upload code with Arduino for a STM32F103C8 board, 72MHz. No hardware-specific functions are used. Nothing else to do, it should work immediately (with the USB fix).
 
 Serial port 2 RX is connected to the dive computer. USB-Serial is used to communicate with DataTrack.
 
-Use is the same as with the MemoMouse: Connect, start DataTrack transfer (option "get newest"), start Aladin log transfer.
+Use it like with the MemoMouse: Connect, start DataTrack transfer (option "get newest"), start Aladin log transfer.
+You may need to select the right COM port instead of the default auto mode.
 
 
 LED status:
@@ -50,9 +55,11 @@ Drivers are needed under Windows for the USB-Serial. They can be found here : <h
 
 ## How to Use
 
-Plug the MemoAladin first* to your computer with a micro-usb cable, then plug the 2 wires to your Aladin computer. Then use as a MemoMouse: initiate the transfert on DataTrack, then send the logs with the Aladin. You can also do backward and send the logs from the Aladin first, then transfert from DataTrack. The transfert will be immediate and will not wait for the Aladin (but do not wait too long or your dive logs will have wrong date&time! DataTrack syncs on the Aladin).
+Plug the MemoAladin first* to your computer with a micro-usb cable, then plug the 2 wires to your Aladin computer. Then use as a MemoMouse: initiate the transfert on DataTrack, then send the logs with the Aladin.
 
-* If you plug the wires to the Aladin without the interface powered, the 2 wires will act as shorted and trigger button actions in your Aladin...
+You can also do backward and send the logs from the Aladin first, then transfert from DataTrack. The transfert will be immediate and will not wait for the Aladin (but do not wait too long or your dive logs will have wrong date&time! DataTrack syncs on the Aladin).
+
+ *If you plug the wires to the Aladin without the interface powered, the 2 wires will act as shorted and trigger button actions in your Aladin...
 
 ## 3D Printed Casing
 
