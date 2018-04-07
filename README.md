@@ -10,7 +10,7 @@ In theory it should be compatible with all Aladin computers, but testing were on
 
 ## Hardware
 
-Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": <http://wiki.stm32duino.com/index.php?title=Blue_Pill>
+Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": <http://wiki.stm32duino.com/index.php?title=Blue_Pill> (! you'll need a USB-Serial interface to program the bootloader the first time to be able to use the integrated USB port !)
 
 	You need to fix the USB pullup by replacing R10 with a 1.5k resistor or opt for the dirty fix like me and add a 1.8k resistor between PA12 and 3V3.
 
@@ -36,6 +36,9 @@ Adjust input resistor and add a weak pullup/pulldown to reject Serial port noise
 ## Software
 
 	You need to add STM32 support to Arduino: https://github.com/rogerclarkmelbourne/Arduino_STM32
+	And this Arduino library: https://github.com/harrisonhjones/LEDEffect
+
+The board must be flashed with the appropriate bootloader (see the link provided above in Hardware).
 
 Upload code with Arduino for a STM32F103C8 board, 72MHz. No hardware-specific functions are used. Nothing else to do, it should work immediately (with the USB fix).
 
@@ -59,7 +62,7 @@ Plug the MemoAladin first* to your computer with a micro-usb cable, then plug th
 
 You can also do backward and send the logs from the Aladin first, then transfert from DataTrack. The transfert will be immediate and will not wait for the Aladin (but do not wait too long or your dive logs will have wrong date&time! DataTrack syncs on the Aladin).
 
- *If you plug the wires to the Aladin without the interface powered, the 2 wires will act as shorted and trigger button actions in your Aladin...
+**If you plug the wires to the Aladin without the interface powered, the 2 wires will act as shorted and trigger button actions in your Aladin...*
 
 ## 3D Printed Casing
 
@@ -87,4 +90,4 @@ Report any issue you may find, I will at least try to help!
 
 Source code contains a recorded dive log (straight from an Aladin) I used for tests, might be useful for someone...
 
-If you are interested by acquiring a ready-made interface, contact me.
+If you would like to acquire a ready-made interface, contact me and we'll see what's possible.
