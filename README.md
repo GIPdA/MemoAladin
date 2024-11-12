@@ -11,7 +11,7 @@ In theory it should be compatible with all Aladin computers, but testing were on
 
 ## Hardware
 
-Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": [http://wiki.stm32duino.com/index.php?title=Blue_Pill](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html) (! you'll need a USB-Serial interface to program the bootloader the first time to be able to use the integrated USB port !)
+Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": [https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html) (! you'll need a USB-Serial interface to program the bootloader the first time to be able to use the integrated USB port !)
 
 	You need to fix the USB pullup by replacing R10 with a 1.5k resistor or opt for the dirty fix like me and add a 1.8k resistor between PA12 and 3V3.
 
