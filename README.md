@@ -7,10 +7,11 @@ It only implements dive record send to DataTrack by simulating the MemoMouse pro
 
 In theory it should be compatible with all Aladin computers, but testing were only made with an Aladin Pro.
 
+	Note that this project was done in 2017, and some of the infos below may not be up to date. The hardware should work on any Arduino-compatible board with 2 Serial ports.
 
 ## Hardware
 
-Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": <http://wiki.stm32duino.com/index.php?title=Blue_Pill> (! you'll need a USB-Serial interface to program the bootloader the first time to be able to use the integrated USB port !)
+Very cheap Arduino-compatible STM32 board, also known as "Blue Pill": [http://wiki.stm32duino.com/index.php?title=Blue_Pill](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html) (! you'll need a USB-Serial interface to program the bootloader the first time to be able to use the integrated USB port !)
 
 	You need to fix the USB pullup by replacing R10 with a 1.5k resistor or opt for the dirty fix like me and add a 1.8k resistor between PA12 and 3V3.
 
