@@ -69,7 +69,7 @@ static bool sendBuffer(const uint8_t* data, uint16_t size)
   uint8_t const* dataPtr {data};
 
   while (bufferLength > 0) {
-    uint16_t const sendSize { min(bufferLength, 126) };
+    uint16_t const sendSize { min(bufferLength, uint16_t (126)) };
     uint8_t checksum {0};
 
     write(sendSize); // outer packet size
